@@ -34,7 +34,7 @@ pipeline {
                 
 
                         // Run Maven on a Unix agent.
-                        sh "docker image build -t testJenkins ."
+                        sh "docker image build -t testjenkins ."
 
                     }
 
@@ -45,7 +45,7 @@ pipeline {
                     steps {
                 
                         // Run Maven on a Unix agent.
-                        sh "docker run --privileged=true testJenkins"
+                        sh "docker run testjenkins"
 
                             }
                 }
