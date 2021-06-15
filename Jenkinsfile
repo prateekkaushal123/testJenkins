@@ -18,7 +18,7 @@ pipeline {
                         
 
 
-                                git 'https://github.com/prateekkaushal123/testJenkins.git'
+                                git 'https://github.com/prateekkaushal123/testjenkins2.git'
 
                                 // Run Maven on a Unix agent.
                                 sh "mvn -Dmaven.test.failure.ignore=true clean install"
@@ -34,7 +34,7 @@ pipeline {
                 
 
                         // Run Maven on a Unix agent.
-                        sh "docker image build -t testjenkins ."
+                        sh "docker image build -t testjenkins2 ."
 
                     }
 
@@ -45,7 +45,7 @@ pipeline {
                     steps {
                 
                         // Run Maven on a Unix agent.
-                        sh "docker run testjenkins"
+                        sh "docker run testjenkins2"
 
                             }
                 }
